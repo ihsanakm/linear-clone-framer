@@ -54,7 +54,11 @@ module.exports = {
       "hero-gradient":
         "radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,.1),transparent),radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,.15),transparent)",
       "hero-glow":
-        "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",},
+        "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
+      "glow-lines":
+        "linear-gradient(var(--direction),#9d9bf2 0.43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
+    },
+
     boxShadow: {
       primary: "rgb(80 63 205 / 50%) 0px 1px 40px",
     },
@@ -88,12 +92,28 @@ module.exports = {
         "99%": { "stroke-dashoffset": 0 },
         "100%": { visiblity: "hidden" },
       },
+      "glow-line-horizontal": {
+        "0%": { opacity: 0, transform: "translateX(0)" },
+        "5%": { opacity: 1, transform: "translateX(0)" },
+        "90%": { opacity: 1 },
+        "100%": { opacity: 0, transform: "translateX(min(60vw, 45rem))" },
+      },
+      "glow-line-vertical": {
+        "0%": { opacity: 0, transform: "translateY(0)" },
+        "5%": { opacity: 1, transform: "translateY(0)" },
+        "90%": { opacity: 1 },
+        "100%": { opacity: 0, transform: "translateY(min(21vw, 45rem))" },
+      },
     },
     animation: {
       "fade-in": "fade-in 1000ms var(--animation-delay,0ms) ease forwards",
       "image-rotate": "image-rotate 1400ms ease forwards",
       "image-glow": "image-glow 4100ms 600ms ease-out forwards",
       "sketch-lines": "sketch-lines 1200ms ease-out forwards",
+      "glow-line-horizontal":
+        "glow-line-horizontal var(--animation-duration) ease-in forwards",
+      "glow-line-vertical":
+        "glow-line-vertical var(--animation-duration) ease-in forwards",
     },
   },
   plugins: [],
