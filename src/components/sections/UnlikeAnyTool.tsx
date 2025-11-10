@@ -1,6 +1,7 @@
 import Container from "../Container";
 import { LogoLightIllustration } from "../illustration/LogoLightIllustration";
 import { ZapIllustration } from "../illustration/ZapIllustration";
+import { KeyboardShortcuts } from "../KeyboardShortcuts";
 
 export const UnlikeAnyTool = () => (
   <div className="text-white">
@@ -19,7 +20,7 @@ export const UnlikeAnyTool = () => (
     <div className="h-[48rem] overflow-hidden md:h-auto md:overflow-auto">
       <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-8 pb-12 md:flex-wrap md:overflow-hidden">
         <div className="relative flex min-h-[48rem] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-[4.8rem] border border-whiteBorder bg-glass-gradient p-8 text-center md:max-w-[calc(66.66%-12px)] md:basis-[calc(66.66%-12px)] md:p-14">
-          {/* <KeyboardShortcuts /> */}
+          <KeyboardShortcuts />
           <p className="mb-4 text-3xl">Built for your keyboard</p>
           <p className="text-md text-primary-text">
             Fly through your tasks with rapid-fire keyboard shortcuts for
